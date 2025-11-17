@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Venta - La Suerte{% endblock %}
+{% block page_title %}Venta de Números{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5>Registrar Venta</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Cliente</label>
+                            {{ form.cliente }}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Sorteo</label>
+                            {{ form.sorteo }}
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Número (00-99)</label>
+                            {{ form.numero_apostado }}
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Monto (Q)</label>
+                            {{ form.monto }}
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Sorteo del Día</label>
+                            {{ form.numero_sorteo_dia }}
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-check"></i> Registrar Venta
+                    </button>
+                    <a href="{% url 'sistema:dashboard' %}" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Información de Sorteos</h5>
+            </div>
+            <div class="card-body">
+                {% for sorteo in sorteos %}
+                <div class="mb-2">
+                    <strong>{{ sorteo.get_nombre_display }}</strong><br>
+                    <small>Paga: Q{{ sorteo.factor_pago }} x Q1.00</small><br>
+                    <small>Sorteos diarios: {{ sorteo.sorteos_diarios }}</small>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Validación de número entre 0 y 99
+    document.getElementById('id_numero_apostado').addEventListener('change', function() {
+        let numero = parseInt(this.value);
+        if (numero < 0 || numero > 99) {
+            alert('El número debe estar entre 00 y 99');
+            this.value = '';
+        }
+    });
+</script>
+{% endblock %}

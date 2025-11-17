@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultados - La Suerte{% endblock %}
+{% block page_title %}Registro de Resultados de Sorteos{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Registrar Resultado</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Tipo de Sorteo</label>
+                        {{ form.sorteo }}
+                        {% if form.sorteo.errors %}
+                        <div class="text-danger">{{ form.sorteo.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Fecha del Sorteo</label>
+                        {{ form.fecha }}
+                        {% if form.fecha.errors %}
+                        <div class="text-danger">{{ form.fecha.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Número Ganador (00-99)</label>
+                        {{ form.numero_ganador }}
+                        {% if form.numero_ganador.errors %}
+                        <div class="text-danger">{{ form.numero_ganador.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Sorteo del Día</label>
+                        {{ form.numero_sorteo_dia }}
+                        <small class="form-text text-muted">
+                            Ej: Para "La Santa" puede ser 1, 2 o 3
+                        </small>
+                        {% if form.numero_sorteo_dia.errors %}
+                        <div class="text-danger">{{ form.numero_sorteo_dia.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-flag-checkered"></i> Registrar Resultado
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Resultados de Hoy</h5>
+            </div>
+            <div class="card-body">
+                {% if resultados %}
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Sorteo</th>
+                                <th>Fecha</th>
+                                <th>Sorteo #</th>
+                                <th>Número Ganador</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for resultado in resultados %}
+                            <tr>
+                                <td>
+                                    <span class="badge bg-primary">{{ resultado.sorteo.get_nombre_display }}</span>
+                                </td>
+                                <td>{{ resultado.fecha }}</td>
+                                <td>{{ resultado.numero_sorteo_dia }}</td>
+                                <td>
+                                    <span class="badge bg-success fs-6">{{ resultado.numero_ganador|stringformat:"02d" }}</span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="fas fa-trophy fa-3x mb-3"></i>
+                    <p>No hay resultados registrados para hoy</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Información de Sorteos Diarios</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-info">
+                            <strong>La Santa:</strong> 3 sorteos diarios<br>
+                            <strong>La Rifa:</strong> 1 sorteo diario<br>
+                            <strong>El Sorteo:</strong> 2 sorteos diarios
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Establecer fecha actual por defecto
+    document.getElementById('id_fecha').valueAsDate = new Date();
+    
+    // Validación de número ganador
+    document.getElementById('id_numero_ganador').addEventListener('change', function() {
+        let numero = parseInt(this.value);
+        if (numero < 0 || numero > 99) {
+            alert('El número ganador debe estar entre 00 y 99');
+            this.value = '';
+        }
+    });
+</script>
+{% endblock %}

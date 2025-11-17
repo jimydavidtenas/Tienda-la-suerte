@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}Reporte de Ganadores - La Suerte{% endblock %}
+{% block page_title %}Reporte de Ganadores{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Filtros del Reporte</h5>
+            </div>
+            <div class="card-body">
+                <form method="get" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Fecha del Reporte</label>
+                        <input type="date" name="fecha" class="form-control" value="{{ fecha_reporte }}">
+                    </div>
+                    <div class="col-md-4 align-self-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                        <a href="{% url 'sistema:reporte_ganadores' %}" class="btn btn-secondary">
+                            <i class="fas fa-sync"></i> Hoy
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Resultados de Ganadores - {{ fecha_reporte }}</h5>
+            </div>
+            <div class="card-body">
+                {% if ganadores %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Sorteo</th>
+                                <th>Sorteo #</th>
+                                <th>Número Ganador</th>
+                                <th>Cliente Ganador</th>
+                                <th>Premio</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ganador in ganadores %}
+                            <tr>
+                                <td>
+                                    <span class="badge bg-primary">{{ ganador.sorteo.get_nombre_display }}</span>
+                                </td>
+                                <td>{{ ganador.numero_sorteo }}</td>
+                                <td>
+                                    <span class="badge bg-success fs-6">{{ ganador.numero_ganador|stringformat:"02d" }}</span>
+                                </td>
+                                <td>
+                                    {% if ganador.cliente != 'Ganador desierto' %}
+                                        {{ ganador.cliente.nombre }}
+                                    {% else %}
+                                        <span class="text-muted fst-italic">{{ ganador.cliente }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <strong>Q{{ ganador.premio|floatformat:2 }}</strong>
+                                </td>
+                                <td>
+                                    {% if ganador.cliente != 'Ganador desierto' %}
+                                        {% if ganador.venta.premio_pagado %}
+                                            <span class="badge bg-success">Pagado</span>
+                                        {% elif ganador.venta.puede_reclamar_premio %}
+                                            <span class="badge bg-warning">Por Pagar</span>
+                                        {% else %}
+                                            <span class="badge bg-danger">Expirado</span>
+                                        {% endif %}
+                                    {% else %}
+                                        <span class="badge bg-secondary">Desierto</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if ganador.cliente != 'Ganador desierto' and ganador.venta.puede_reclamar_premio and not ganador.venta.premio_pagado %}
+                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#pagarModal{{ ganador.venta.id }}">
+                                        <i class="fas fa-money-bill-wave"></i> Pagar
+                                    </button>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            
+                            <!-- Modal para pagar premio -->
+                            {% if ganador.cliente != 'Ganador desierto' %}
+                            <div class="modal fade" id="pagarModal{{ ganador.venta.id }}" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Pagar Premio</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Cliente:</strong> {{ ganador.cliente.nombre }}</p>
+                                            <p><strong>Sorteo:</strong> {{ ganador.sorteo.get_nombre_display }}</p>
+                                            <p><strong>Número Ganador:</strong> {{ ganador.numero_ganador|stringformat:"02d" }}</p>
+                                            <p><strong>Premio a Pagar:</strong> Q{{ ganador.premio|floatformat:2 }}</p>
+                                            <p class="text-warning"><strong>¿Confirmar pago del premio?</strong></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <form method="post" action="{% url 'sistema:pagar_premio' ganador.venta.id %}">
+                                                {% csrf_token %}
+                                                <button type="submit" class="btn btn-success">Confirmar Pago</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="alert alert-info">
+                            <strong>Resumen:</strong><br>
+                            Total de sorteos: {{ ganadores|length }}<br>
+                            Ganadores con premio: {{ ganadores|length }}<br>
+                            Premio total: Q{{ ganadores|add:'premio'|floatformat:2 }}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-5">
+                    <i class="fas fa-trophy fa-4x mb-3"></i>
+                    <h5>No hay resultados de ganadores para esta fecha</h5>
+                    <p>Verifique que los sorteos hayan sido registrados</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

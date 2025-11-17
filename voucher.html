@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block title %}Voucher - La Suerte{% endblock %}
+{% block page_title %}Voucher de Venta{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-success text-white text-center">
+                <h4 class="mb-0">LA SUERTE</h4>
+                <p class="mb-0">Sistema de Sorteos</p>
+            </div>
+            <div class="card-body">
+                <!-- Encabezado del voucher -->
+                <div class="text-center mb-4">
+                    <h5 class="text-primary">COMPROBANTE DE VENTA</h5>
+                    <p class="text-muted mb-0">Voucher No. {{ venta.id|stringformat:"06d" }}</p>
+                </div>
+                
+                <!-- Información de la venta -->
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Fecha y Hora:</strong></div>
+                    <div class="col-6">{{ venta.fecha_venta|date:"d/m/Y H:i:s" }}</div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Cliente:</strong></div>
+                    <div class="col-6">{{ venta.cliente.nombre }}</div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Teléfono:</strong></div>
+                    <div class="col-6">{{ venta.cliente.telefono }}</div>
+                </div>
+                
+                <hr>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Sorteo:</strong></div>
+                    <div class="col-6">
+                        <span class="badge bg-primary">{{ venta.sorteo.get_nombre_display }}</span>
+                    </div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Sorteo del Día:</strong></div>
+                    <div class="col-6">#{{ venta.numero_sorteo_dia }}</div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Número Apostado:</strong></div>
+                    <div class="col-6">
+                        <span class="badge bg-success fs-4">{{ venta.numero_apostado|stringformat:"02d" }}</span>
+                    </div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Monto Apostado:</strong></div>
+                    <div class="col-6 fs-5"><strong>Q{{ venta.monto|floatformat:2 }}</strong></div>
+                </div>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Premio Potencial:</strong></div>
+                    <div class="col-6 fs-5 text-success">
+                        <strong>Q{{ venta.calcular_premio|floatformat:2 }}</strong>
+                        {% if venta.cliente.fecha_nacimiento.day == venta.fecha_venta.day and venta.cliente.fecha_nacimiento.month == venta.fecha_venta.month %}
+                        <br><small class="text-warning">(+10% bono cumpleaños)</small>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Atendido por:</strong></div>
+                    <div class="col-6">{{ venta.atendido_por.get_full_name|default:venta.atendido_por.username }}</div>
+                </div>
+                
+                <!-- Información importante -->
+                <div class="alert alert-warning mt-4">
+                    <h6 class="alert-heading">¡Importante!</h6>
+                    <ul class="mb-0 small">
+                        <li>Conserve este comprobante para reclamar su premio</li>
+                        <li>Tiene <strong>5 días hábiles</strong> para reclamar su premio</li>
+                        <li>El premio está sujeto a verificación</li>
+                        <li>Presentar identificación al reclamar</li>
+                    </ul>
+                </div>
+                
+                <!-- Código QR (placeholder) -->
+                <div class="text-center mt-3">
+                    <div class="border p-2 d-inline-block">
+                        <i class="fas fa-qrcode fa-4x text-muted"></i>
+                        <p class="small text-muted mb-0">Código de verificación</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <button onclick="window.print()" class="btn btn-primary">
+                    <i class="fas fa-print"></i> Imprimir
+                </button>
+                <a href="{% url 'sistema:realizar_venta' %}" class="btn btn-success">
+                    <i class="fas fa-plus"></i> Nueva Venta
+                </a>
+                <a href="{% url 'sistema:dashboard' %}" class="btn btn-secondary">Inicio</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Auto-impresión opcional (descomenta si lo necesitas)
+    // window.addEventListener('load', function() {
+    //     window.print();
+    // });
+    
+    // Estilos para impresión
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @media print {
+            .sidebar, .btn, .card-footer {
+                display: none !important;
+            }
+            .card {
+                border: none !important;
+                box-shadow: none !important;
+            }
+            body {
+                background: white !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+{% endblock %}

@@ -1,0 +1,226 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Página-1" id="Q_KkdOx-dKM97W0K-YYb">
+    <mxGraphModel dx="2605" dy="1565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-33" value="ACTORES" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=49;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="370" y="50" width="266" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-34" value="CASOS DE USOS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=49;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="240" y="700" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-35" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="180" y="170" width="430" height="412.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-10" value="" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry width="430" height="412.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-35" source="7FLCuyHrYrQWvsyhwY9g-1" target="7FLCuyHrYrQWvsyhwY9g-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-35" source="7FLCuyHrYrQWvsyhwY9g-1" target="7FLCuyHrYrQWvsyhwY9g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-35" source="7FLCuyHrYrQWvsyhwY9g-1" target="7FLCuyHrYrQWvsyhwY9g-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-35" source="7FLCuyHrYrQWvsyhwY9g-1" target="7FLCuyHrYrQWvsyhwY9g-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-1" value="Vendedor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry x="30" y="176.25" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-2" value="Gestionar clientes" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry x="230" y="16.25" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-4" value="Realizar ventas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry x="230" y="116.25" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-6" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Generar Vouchers&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry x="210" y="216.25" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-8" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Consultar Reportes Básicos&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-35">
+          <mxGeometry x="204" y="316.25" width="166" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-36" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="730" y="110" width="380" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-22" value="" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry width="380" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-36" source="7FLCuyHrYrQWvsyhwY9g-11" target="7FLCuyHrYrQWvsyhwY9g-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-36" source="7FLCuyHrYrQWvsyhwY9g-11" target="7FLCuyHrYrQWvsyhwY9g-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-36" source="7FLCuyHrYrQWvsyhwY9g-11" target="7FLCuyHrYrQWvsyhwY9g-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-36" source="7FLCuyHrYrQWvsyhwY9g-11" target="7FLCuyHrYrQWvsyhwY9g-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-11" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontStyle=1" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="50" y="220" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-12" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;Gestionar Sorteos&lt;/pre&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="210" y="16.879999999999995" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-13" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;Gestionar Sorteos&lt;/pre&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="210" y="116.88" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-14" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Pagar Premios&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="210" y="216.88" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-15" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Generar Reportes Avanzados&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="210" y="316.88" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-16" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Configurar Sistema&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-36">
+          <mxGeometry x="210" y="413.13" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-36" source="7FLCuyHrYrQWvsyhwY9g-11" target="7FLCuyHrYrQWvsyhwY9g-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-65" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="90" y="1240" width="380" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-64" value="" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry width="380" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-60" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-65" source="7FLCuyHrYrQWvsyhwY9g-55" target="7FLCuyHrYrQWvsyhwY9g-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-61" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-65" source="7FLCuyHrYrQWvsyhwY9g-55" target="7FLCuyHrYrQWvsyhwY9g-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-62" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-65" source="7FLCuyHrYrQWvsyhwY9g-55" target="7FLCuyHrYrQWvsyhwY9g-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-63" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-65" source="7FLCuyHrYrQWvsyhwY9g-55" target="7FLCuyHrYrQWvsyhwY9g-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-55" value="&#xa;&lt;pre style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important;&quot;&gt;Gestión de Sorteos&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;align=center;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry x="10" y="190" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-56" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Configurar Sorteos&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry x="220" y="20" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-57" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Registrar Resultado&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry x="220" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-58" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Marcar Ganadores&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry x="214" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-59" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Validar Sorteos Diarios&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-65">
+          <mxGeometry x="214" y="290" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-67" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="790" width="430" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-39" value="" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry width="430" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-67" source="7FLCuyHrYrQWvsyhwY9g-23" target="7FLCuyHrYrQWvsyhwY9g-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-67" source="7FLCuyHrYrQWvsyhwY9g-23" target="7FLCuyHrYrQWvsyhwY9g-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-67" source="7FLCuyHrYrQWvsyhwY9g-23" target="7FLCuyHrYrQWvsyhwY9g-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-67" source="7FLCuyHrYrQWvsyhwY9g-23" target="7FLCuyHrYrQWvsyhwY9g-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-23" value="&#xa;&lt;pre style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important;&quot;&gt;Gestión de Clientes&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontStyle=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry x="20" y="180" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-24" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Registrar Cliente&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry x="175" y="20" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-25" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Modificar Cliente&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry x="260" y="120" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-28" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Consultar Cliente&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry x="270" y="230" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-30" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Verificar Cumpleaños&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-67">
+          <mxGeometry x="200" y="320" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-68" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="610" y="800" width="400" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-51" value="" style="html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry width="400" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-43" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-68" source="7FLCuyHrYrQWvsyhwY9g-32" target="7FLCuyHrYrQWvsyhwY9g-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-68" source="7FLCuyHrYrQWvsyhwY9g-32" target="7FLCuyHrYrQWvsyhwY9g-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-68" source="7FLCuyHrYrQWvsyhwY9g-32" target="7FLCuyHrYrQWvsyhwY9g-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-50" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-68" source="7FLCuyHrYrQWvsyhwY9g-32" target="7FLCuyHrYrQWvsyhwY9g-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-32" value="&#xa;&lt;pre style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important;&quot;&gt;Proceso de Venta&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="20" y="220" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-41" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Seleccionar Sorteo&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="180" y="30" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-42" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Ingresar Número&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="220" y="120" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-45" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Calcular Premio&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="230" y="210" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-47" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Generar Voucher&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="215" y="300" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-49" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Registrar Venta&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-68">
+          <mxGeometry x="200" y="390" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-53" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-68" source="7FLCuyHrYrQWvsyhwY9g-32" target="7FLCuyHrYrQWvsyhwY9g-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-79" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="560" y="1374" width="440" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-78" value="" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry width="440" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-74" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-79" source="7FLCuyHrYrQWvsyhwY9g-69" target="7FLCuyHrYrQWvsyhwY9g-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-75" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-79" source="7FLCuyHrYrQWvsyhwY9g-69" target="7FLCuyHrYrQWvsyhwY9g-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-76" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-79" source="7FLCuyHrYrQWvsyhwY9g-69" target="7FLCuyHrYrQWvsyhwY9g-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-77" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="7FLCuyHrYrQWvsyhwY9g-79" source="7FLCuyHrYrQWvsyhwY9g-69" target="7FLCuyHrYrQWvsyhwY9g-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-69" value="&#xa;&lt;pre style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin: 0px !important;&quot;&gt;Reportes&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;align=center;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry x="30" y="140" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-70" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Reporte de Ganadores&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry x="220" y="20" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-71" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Histórico de Ventas&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry x="190" y="290" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-72" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Reporte por Sorteo Específico&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry x="260" y="210" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7FLCuyHrYrQWvsyhwY9g-73" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, Consolas, &amp;quot;Cascadia Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Reporte de Recaudación&lt;/pre&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7FLCuyHrYrQWvsyhwY9g-79">
+          <mxGeometry x="260" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

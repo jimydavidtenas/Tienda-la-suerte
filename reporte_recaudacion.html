@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load custom_filters %}  <!-- Agregar esta línea al inicio -->
+
+{% block title %}Reporte de Recaudación - La Suerte{% endblock %}
+{% block page_title %}Reporte de Recaudación{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Filtros del Reporte</h5>
+            </div>
+            <div class="card-body">
+                <form method="get" class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Inicio</label>
+                        <input type="date" name="fecha_inicio" class="form-control" value="{{ fecha_inicio }}">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Fin</label>
+                        <input type="date" name="fecha_fin" class="form-control" value="{{ fecha_fin }}">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Sorteo Específico</label>
+                        <select name="sorteo" class="form-select">
+                            <option value="">Todos los sorteos</option>
+                            {% for sorteo in sorteos %}
+                            <option value="{{ sorteo.id }}" {% if sorteo_seleccionado == sorteo.id|stringformat:"i" %}selected{% endif %}>
+                                {{ sorteo.get_nombre_display }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3 align-self-end">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Generar Reporte
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Recaudación del Período: {{ fecha_inicio }} al {{ fecha_fin }}</h5>
+            </div>
+            <div class="card-body">
+                <!-- Resumen General -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body text-center">
+                                <h6>Total Recaudado</h6>
+                                <h3>Q{{ total_recaudado|floatformat:2 }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h6>Total Ventas</h6>
+                                <h3>
+                                    {% with total_ventas=recaudacion_por_sorteo|length %}
+                                        {{ total_ventas }}
+                                    {% endwith %}
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-info text-white">
+                            <div class="card-body text-center">
+                                <h6>Período</h6>
+                                <h5>{{ fecha_inicio }} a {{ fecha_fin }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de Recaudación por Sorteo -->
+                {% if recaudacion_por_sorteo %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Tipo de Sorteo</th>
+                                <th>Cantidad de Ventas</th>
+                                <th>Total Recaudado</th>
+                                <th>Porcentaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in recaudacion_por_sorteo %}
+                            <tr>
+                                <td>
+                                    <span class="badge bg-primary">{{ item.sorteo__nombre }}</span>
+                                </td>
+                                <td>{{ item.cantidad }}</td>
+                                <td><strong>Q{{ item.total|floatformat:2 }}</strong></td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" 
+                                             style="width: {{ item.total|percentage:total_recaudado }}%">
+                                            {{ item.total|percentage:total_recaudado|floatformat:1 }}%
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot class="table-dark">
+                            <tr>
+                                <th>TOTAL GENERAL</th>
+                                <th>
+                                    {% with total_ventas=recaudacion_por_sorteo|length %}
+                                        {{ total_ventas }}
+                                    {% endwith %}
+                                </th>
+                                <th>Q{{ total_recaudado|floatformat:2 }}</th>
+                                <th>100%</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Gráfico simple -->
+                <div class="row mt-4">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6>Distribución por Sorteo</h6>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="recaudacionChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-5">
+                    <i class="fas fa-chart-bar fa-4x mb-3"></i>
+                    <h5>No hay datos de recaudación para el período seleccionado</h5>
+                    <p>Intente con un rango de fechas diferente</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Gráfico de recaudación
+    {% if recaudacion_por_sorteo %}
+    const ctx = document.getElementById('recaudacionChart').getContext('2d');
+    const recaudacionChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: [
+                {% for item in recaudacion_por_sorteo %}
+                '{{ item.sorteo__nombre }}'{% if not forloop.last %},{% endif %}
+                {% endfor %}
+            ],
+            datasets: [{
+                data: [
+                    {% for item in recaudacion_por_sorteo %}
+                    {{ item.total }}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                ],
+                backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: true,
+                    text: 'Distribución de Recaudación por Sorteo'
+                }
+            }
+        }
+    });
+    {% endif %}
+    
+    // Filtro de fecha automático
+    document.querySelector('input[name="fecha_fin"]').addEventListener('change', function() {
+        const fechaInicio = document.querySelector('input[name="fecha_inicio"]');
+        if (!fechaInicio.value) {
+            fechaInicio.value = this.value;
+        }
+    });
+</script>
+{% endblock %}
